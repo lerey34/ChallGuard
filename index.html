@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,700,1,200"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Challguard</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="top">
+          <div class="logo">
+            <img src="./images/challguard.png" class="img" />
+          </div>
+          <!-- <div class="close" id="close-btn">
+            <span class="material-symbols-rounded"> close </span>
+          </div> -->
+        </div>
+        <div class="sidebar">
+          <a id="accueil" class="sidebare active-side">
+            <!-- <span class="material-symbols-rounded"> grid_view </span> -->
+            <h3>Accueil</h3>
+          </a>
+          <a id="chal" class="sidebare">
+            <!-- <span class="material-symbols-rounded"> person </span> -->
+            <h3>Challenges</h3>
+          </a>
+          <a id="monitoring" class="sidebare">
+            <!-- <span class="material-symbols-rounded"> receipt_long </span> -->
+            <h3>Monitoring</h3>
+          </a>
+          <a id="requetes" class="sidebare">
+            <!-- <span class="material-symbols-rounded"> analytics </span> -->
+            <h3>Requetes</h3>
+            <span class="message-count">26</span>
+          </a>
+          <a id="parametre" class="sidebare">
+            <!-- <span class="material-symbols-rounded"> android_messages </span> -->
+            <h3>Paramètres</h3>
+          </a>
+          <a href="">
+            <!-- <span class="material-symbols-rounded"> logout </span> -->
+            <h3>Logout</h3>
+          </a>
+        </div>
+      </aside>
+      <div class="container2">
+        <main class="header">
+          <div class="right">
+            <div class="top">
+              <button class="menu-btn" id="menu-btn">
+                <span class="material-symbols-rounded"> menu </span>
+              </button>
+              <div class="theme-toggler" id="theme-toggler">
+                <span class="material-symbols-rounded active">
+                  light_mode
+                </span>
+                <span class="material-symbols-rounded"> dark_mode </span>
+              </div>
+              <div class="profile">
+                <div class="info">
+                  <p>Hey, <b>Root !</b></p>
+                  <small class="text-muted">Log Out</small>
+                </div>
+                <div class="profile-photo">
+                  <img src="./images/profile.png" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main>
+          <h1 id="title-page">Accueil</h1>
+          <div class="date">
+            <p class="date-day">06/05/2022</p>
+            <img src="./images/calendar.png" alt="" srcset="" />
+          </div>
+        </main>
+        <main id="accueil-page" class="active-page"><p>DU VIDE</p></main>
+        <main id="challenge-page" class="no-active-page">
+          <div class="recent-order">
+            <div class="title">
+              <h2 id="title-page">Challenges</h2>
+              <span class="material-symbols-rounded" data-modal-target="#modal">
+                add_circle
+              </span>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>type</th>
+                  <th>name</th>
+                  <th>value</th>
+                  <th>solves</th>
+                  <th>category</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Chalenge1</td>
+                  <td>test</td>
+                  <td>50</td>
+                  <td>3</td>
+                  <td>xml</td>
+                  <td class="primary">Details</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </main>
+        <main id="parametre-page" class="no-active-page">
+          <div class="container-param">
+            <div class="cont-param activ-param" id="formLogin">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">URL</span>
+                  <input
+                    type="text"
+                    placeholder="Enter your URL"
+                    id="url"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <span class="details">TOKEN</span>
+                  <input
+                    type="text"
+                    placeholder="Enter your TOKEN"
+                    id="token"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="button">
+                <input type="submit" value="Register" id="login" />
+              </div>
+            </div>
+            <div class="cont-param dis-param" id="txtLogin">
+              <h1 id="txt-url">URL :</h1>
+              <h1 id="txt-token">TOKEN :</h1>
+            </div>
+          </div>
+        </main>
+        <div class="modal" id="modal">
+          <div class="modal-header">
+            <div class="tittle">Add Challenge</div>
+            <div class="close-button" data-close-button>
+              <span class="material-symbols-rounded"> close </span>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="container-param">
+              <div class="cont-modal" id="formLogin">
+                <div class="user-details">
+                  <div class="input-box">
+                    <span class="details">Name</span>
+                    <input
+                      type="text"
+                      placeholder="Enter the name"
+                      id="Name-chal"
+                      required
+                    />
+                  </div>
+                  <div class="input-box">
+                    <span class="details">Info</span>
+                    <input
+                      type="text"
+                      placeholder="Enter the info"
+                      id="Info-chal"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="button">
+                  <input type="submit" value="Add" id="add-chal" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="overlay"></div>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
